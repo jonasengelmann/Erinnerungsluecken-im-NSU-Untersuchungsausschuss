@@ -4,11 +4,11 @@
 
 A parliamentary inquiry committee was set up in 2016 with the aim of comprehensively investigating the significant failures and errors of the security authorities in connection with the right-extremist terrorist organization NSU. Particularly noticeable in these interrogations is the considerable lack of memory, which was always expressed by the summoned witnesses and eventually prevented a comprehensive investigation.
 
-I have automatically captured a plethora of such instances where witnesses expressed their inability to remember. The results are visualized [here](www.erinnerungsluecken-im-nsu-untersuchungsausschuss.de). In this repository I will describe the tools and methods I used.
+I have automatically captured a plethora of such instances where witnesses expressed their inability to remember. The results are visualized [here](https://erinnerungsluecken-im-nsu-untersuchungsausschuss.de). In this repository I will describe the tools and methods I used.
 
 ## 1. Scraping PDFs and parsing relevant information
 
-As I could only find the transcript in PDF format, I had to scrape its content first. The process is straightforward and can be reproduced using [this]() Jupyter notebook. 
+As I could only find the transcript in PDF format, I had to scrape its content first. The process is straightforward and can be reproduced using [this](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Scraping_and_parsing_of_transcripts.ipynb) Jupyter notebook. 
 
 ## 2. Semantic matching
 
