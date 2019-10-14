@@ -6,7 +6,7 @@ A parliamentary inquiry committee was set up in 2016 with the aim of comprehensi
 
 I have automatically captured a plethora of such instances where witnesses expressed their inability to remember. The results are visualized [here](https://erinnerungsluecken-im-nsu-untersuchungsausschuss.de). In this repository I will describe the tools and methods I used.
 
-## 1. Scraping PDFs and parsing relevant information
+## 1. Scraping PDFs and parsing content
 
 As I could only find the transcript in PDF format, I had to scrape its content first. The process is straightforward and can be reproduced using [this](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Scraping_and_parsing_of_transcripts.ipynb) Jupyter notebook. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Scraping_and_parsing_of_transcripts.ipynb)
 
