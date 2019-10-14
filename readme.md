@@ -1,5 +1,5 @@
 # Erinnerungslücken im NSU-Untersuchungsausschuss
->Translation: Gaps of memory during the investigation/hearings of the parliamentary enquiry committee into the NSU (national socialist underground)
+>Translation: Gaps of memory during the investigation of the parliamentary enquiry committee into the NSU (national socialist underground)
 
 
 A parliamentary inquiry committee was set up in 2016 with the aim of comprehensively investigating the significant failures and errors of the security authorities in connection with the right-extremist terrorist organization NSU. Particularly noticeable in these interrogations is the considerable lack of memory, which was always expressed by the summoned witnesses and eventually prevented a comprehensive investigation.
