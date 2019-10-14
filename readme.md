@@ -23,7 +23,7 @@ In a first attempt I matched a few commonly used expressions with simple regular
 
 can easily be matched with a rule like this:
 
-```python
+```
 .*?erinnere.*?nicht.*?|.*?nicht.*?erinner.*?
 ```
 (.*? matches any character thus ensuring small variations with the same sentence structure are captured too)
@@ -39,4 +39,4 @@ In a second attempt I trained a sentence classifier with [BERT](https://github.c
 
 Using the regular expression from above I label a training dataset which I used to fine-tune the BERT model to this specific classification task, which is analogous to a spam vs not-spam problem, i.e. I-don't-remember vs anything-else.
 
-The Jupyter notebook can be found [here]().
+The Jupyter notebook can be found [here](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Semantic_matching.ipynb).
