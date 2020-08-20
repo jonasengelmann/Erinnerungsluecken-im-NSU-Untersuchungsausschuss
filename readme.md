@@ -6,14 +6,15 @@ A parliamentary inquiry committee was set up in 2016 with the aim of comprehensi
 
 I have automatically captured a plethora of such instances where witnesses expressed their inability to remember. The results are visualized [here](https://erinnerungsluecken-im-nsu-untersuchungsausschuss.de). In this repository I will describe the tools and methods I used.
 
+
 ## 1. Scraping PDFs and parsing content
 
-As I could only find the transcript in PDF format, I had to scrape its content first. The process is straightforward and can be reproduced using [this](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Scraping_and_parsing_of_transcripts.ipynb) Jupyter notebook. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Scraping_and_parsing_of_transcripts.ipynb)
+As I could only find the transcript in PDF format, I had to scrape its content first. The process is straightforward, I am using pdfminer to create an XML representation of each pdf page and then parse these XMLs.
 
 ## 2. Semantic matching
 
 
-### 2.1. With Regular Expressions:
+### 2.1. With Regular Expressions
 
 In a first attempt I matched a few commonly used expressions with simple regular expression rules. Sentences like these: 
 
@@ -33,11 +34,11 @@ However, this approach can easily misclassify, as there is quite a high chance t
 
 By adding a variety of synonyms expression that came to mind I was able to match quite a few instances with this method. Yet, it is quite easy to miss a few, so I was looking for a more generalized approach.
 
-### 2.2 With BERT:
+### 2.2 With BERT
 
 In a second attempt I trained a sentence classifier with [BERT](https://github.com/google-research/bert). BERT is a model that provides language representation based on contextual word embeddings, meaning it encodes words in a multidimensional vector space based on the contexts (the surrounding words) they appear in a sentence. This has the interesting effect that some level of semantic information is encoded in the vector space as well, as similar and synonymous words appear in vicinity to each other.
 
 Using the regular expression from above I label a training dataset which I used to fine-tune the BERT model to this specific classification task, which is analogous to a spam vs not-spam problem, i.e. I-don't-remember vs anything-else.
 
-The Jupyter notebook can be found [here](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Semantic_matching.ipynb). 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Semantic_matching.ipynb) When opening in Colab, a GPU has to be selected under runtime -> Change runtime type.
+The Jupyter notebook can be found [here](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Semantic_Matching.ipynb) or directly opened in Colab:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/jonasengelmann/erinnerungsluecken-im-nsu-untersuchungsausschuss/blob/master/Semantic_Matching.ipynb) When opening in Colab, a GPU has to be selected under runtime -> Change runtime type.
